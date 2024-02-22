@@ -71,3 +71,14 @@
     position: absolute;
     width: 100%;
 }
+.home_content-box1-start::-webkit-scrollbar{
+    display: none;
+    overflow: scroll;
+    width: 100%;
+}
+.home_content-box1-start {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
+}

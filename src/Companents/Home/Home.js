@@ -1,8 +1,16 @@
 import React from 'react';
+import Slider from "react-slick"
 import i1 from "../../Images/img1.png"
 import russia from "../../Images/russia.png"
 
 function Home(props) {
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
     const TopDating = [
         {
             id:1,
@@ -12,7 +20,56 @@ function Home(props) {
             name: "Виктор 22",
         },
         {
-            id:1,
+            id:2,
+            img: i1,
+            nationality:"Россия",
+            flag: russia,
+            name: "Виктор 22",
+        },
+        {
+            id:3,
+            img: i1,
+            nationality:"Россия",
+            flag: russia,
+            name: "Виктор 22",
+        },
+        {
+            id:4,
+            img: i1,
+            nationality:"Россия",
+            flag: russia,
+            name: "Виктор 22",
+        },
+        {
+            id:5,
+            img: i1,
+            nationality:"Россия",
+            flag: russia,
+            name: "Виктор 22",
+        },
+        {
+            id:6,
+            img: i1,
+            nationality:"Россия",
+            flag: russia,
+            name: "Виктор 22",
+        },
+        {
+            id:7,
+            img: i1,
+            nationality:"Россия",
+            flag: russia,
+            name: "Виктор 22",
+        },
+        {
+            id:8,
+            img: i1,
+            nationality:"Россия",
+            flag: russia,
+            name: "Виктор 22",
+        },
+        {
+            id:9,
             img: i1,
             nationality:"Россия",
             flag: russia,
@@ -27,6 +84,8 @@ function Home(props) {
                         <div className="home_content-box1">
                             <h3>Топ для знакомств</h3>
                             <div className="home_content-box1-start">
+                                <Slider {...settings}>
+
                                 {
                                     TopDating.map(item =>{
                                         return(
@@ -65,6 +124,8 @@ function Home(props) {
                                         )
                                     })
                                 }
+                                </Slider>
+
                             </div>
                         </div>
                     </div>
