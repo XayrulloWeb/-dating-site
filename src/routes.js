@@ -1,5 +1,6 @@
 import Login from "./Login/Login";
 import Home from "./Companents/Home/Home";
+import User from "./Companents/User/User";
 
 
 const routes = [
@@ -13,6 +14,11 @@ const routes = [
         id:2,
         path: "/login",
         component: Login,
+    },
+    {
+        id:3,
+        path: "/user",
+        component: User,
     },
 
 

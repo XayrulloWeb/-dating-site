@@ -1,6 +1,7 @@
 @import url(../Companents/Home/home.css);
 @import url(../Companents/Navbar/navbar.css);
 @import url(../Login/login.css);
+@import url(../Companents/User/user.css);
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 *{
@@ -14,4 +15,5 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 40px;
+    height: auto;
 }

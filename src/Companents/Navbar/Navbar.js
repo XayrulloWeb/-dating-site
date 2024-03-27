@@ -1,13 +1,20 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from "react-router-dom";
 import account from "../../Images/account.png"
 
 function Navbar(props) {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+      setIsOpen(!isOpen);
+    };
     return (
         <div className="navbar">
             <div className="container">
                 <div className="navbar_start">
+                <Link to={"/"}>
                     <div className="navbar_icon">
+                      
                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
                             <g clip-path="url(#clip0_17_4433)">
                                 <path d="M20.9373 13.9449C21.7682 15.4637 23.0367 16.6576 24.1559 17.7104C24.3422 17.8858 24.5271 18.0597 24.7075 18.2327C25.4024 18.9002 26.1009 19.5392 26.7761 20.1563C27.4362 20.7596 28.1183 21.3835 28.7825 22.0212C29.4629 22.6744 30.5375 22.6744 31.2178 22.0212C31.8816 21.384 32.5636 20.7605 33.2233 20.1572C33.8989 19.5397 34.5975 18.9006 35.2928 18.2327C35.4727 18.0597 35.6577 17.8862 35.844 17.7109C36.9637 16.6576 38.2321 15.4637 39.063 13.9449C40.217 11.8346 40.1785 9.38645 38.96 7.39609C37.762 5.43915 35.8998 4.35242 33.7172 4.33594C32.4254 4.32587 31.1597 4.69391 30.0478 5.39521L30.0432 5.39803C30.0169 5.4145 29.9834 5.41447 29.9571 5.39795C28.8548 4.70261 27.6028 4.33594 26.3326 4.33594C26.3161 4.33594 26.3 4.33594 26.2831 4.33594C24.1005 4.35242 22.2383 5.43915 21.0403 7.39609C19.8218 9.38645 19.7833 11.8346 20.9373 13.9449Z" fill="url(#paint0_linear_17_4433)"/>
@@ -28,7 +35,9 @@ function Navbar(props) {
                             </defs>
                         </svg>
                         <p>Znakomstva.com</p>
+                      
                     </div>
+                    </Link>
 
                     <div className="navbar_links">
                         <ul>
@@ -69,7 +78,14 @@ function Navbar(props) {
                             <img src={account} alt="icon"/>
                             <p>Иван Иванов</p>
                         </div>
-
+                        
+                        <div className='hamburger-menu'>
+                        <button className={`hamburger  ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                        </button>
+                        </div>
 
                     </div>
                 </div>
